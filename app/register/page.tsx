@@ -40,7 +40,7 @@ const RegisterPage = () => {
           type: "success",
           autoClose: 2000,
         });
-        setTimeout(() => router.replace("/user/login"), 1000);
+        setTimeout(() => router.replace("/login"), 1000);
       } else {
         toast(data.message, {
           hideProgressBar: true,
@@ -61,7 +61,7 @@ const RegisterPage = () => {
   return (
     <div className=" flex items-center justify-center min-h-screen bg-gray-100">
       <ToastContainer containerId={`toastRegister`} />
-      <div className="w-3/6 p-8 bg-white rounded shadow-md ">
+      <div className="w-3/6 p-8  rounded shadow-md ">
         <h1 className="text-2xl font-bold mb-4 ">Login</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -122,7 +122,7 @@ const RegisterPage = () => {
         </form>
         <div className=" mt-4 text-center text-gray-600">
           Already have an account?{" "}
-          <Link href="/user/login" className="text-blue-500 hover:underline">
+          <Link href="/login" className="text-blue-500 hover:underline">
             Login Here
           </Link>
         </div>
